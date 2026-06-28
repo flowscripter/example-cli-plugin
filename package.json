@@ -1,0 +1,44 @@
+{
+  "name": "@flowscripter/example-cli-plugin",
+  "version": "0.0.1",
+  "description": "Example CLI plugin for the https://github.com/flowscripter/dynamic-cli-framework",
+  "keywords": [
+    "bun",
+    "cli",
+    "dynamic",
+    "dynamic-cli-framework",
+    "example",
+    "plugin"
+  ],
+  "homepage": "https://github.com/flowscripter/example-cli-plugin#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flowscripter/example-cli-plugin.git"
+  },
+  "type": "module",
+  "module": "index.ts",
+  "exports": "./index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dynamic-cli-framework": {
+    "extensionPoints": [
+      "DYNAMIC_CLI_FRAMEWORK_COMMAND_FACTORY",
+      "DYNAMIC_CLI_FRAMEWORK_SERVICE_PROVIDER_FACTORY"
+    ]
+  },
+  "dependencies": {
+    "@flowscripter/dynamic-plugin-framework": "../dynamic-plugin-framework"
+  },
+  "peerDependencies": {
+    "@flowscripter/dynamic-cli-framework": "*",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@flowscripter/dynamic-cli-framework": "../dynamic-cli-framework",
+    "@types/bun": "^1.3.14",
+    "oxfmt": "0.56.0",
+    "oxlint": "1.71.0"
+  }
+}
