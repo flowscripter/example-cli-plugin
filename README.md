@@ -25,7 +25,7 @@ Format:
 
 Lint:
 
-`bunx oxlint index.ts`
+`bunx oxlint index.ts src/ tests/`
 
 Generate HTML API Documentation:
 
