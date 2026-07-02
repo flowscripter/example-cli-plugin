@@ -1,4 +1,8 @@
-import type { SubCommand, Context, ArgumentValues } from "@flowscripter/dynamic-cli-framework/plugin";
+import type {
+  SubCommand,
+  Context,
+  ArgumentValues,
+} from "@flowscripter/dynamic-cli-framework/plugin";
 import { ArgumentValueTypeName } from "@flowscripter/dynamic-cli-framework/plugin";
 import { DEMO_SERVICE_ID } from "../service/DemoService.ts";
 import type DemoService from "../service/DemoService.ts";

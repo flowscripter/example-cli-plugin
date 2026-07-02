@@ -23,8 +23,7 @@ describe("example-cli-plugin", () => {
 
   test("plugin registers SERVICE_PROVIDER_FACTORY extension point", () => {
     const ep = plugin.extensionDescriptors.find(
-      (d) =>
-        d.extensionPoint === DYNAMIC_CLI_FRAMEWORK_SERVICE_PROVIDER_FACTORY_EXTENSION_POINT,
+      (d) => d.extensionPoint === DYNAMIC_CLI_FRAMEWORK_SERVICE_PROVIDER_FACTORY_EXTENSION_POINT,
     );
     expect(ep).toBeDefined();
   });
@@ -41,8 +40,7 @@ describe("example-cli-plugin", () => {
 
   test("service provider factory creates DemoServiceProvider", async () => {
     const descriptor = plugin.extensionDescriptors.find(
-      (d) =>
-        d.extensionPoint === DYNAMIC_CLI_FRAMEWORK_SERVICE_PROVIDER_FACTORY_EXTENSION_POINT,
+      (d) => d.extensionPoint === DYNAMIC_CLI_FRAMEWORK_SERVICE_PROVIDER_FACTORY_EXTENSION_POINT,
     )!;
     const factory = (await descriptor.factory.create()) as ServiceProviderFactory;
     const providers = factory.getServiceProviders();
