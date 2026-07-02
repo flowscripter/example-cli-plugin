@@ -16,11 +16,30 @@
     "type": "git",
     "url": "git+https://github.com/flowscripter/example-cli-plugin.git"
   },
+  "files": [
+    "dist",
+    "src",
+    "index.ts",
+    "cli-plugin.ts",
+    "README.md",
+    "LICENSE"
+  ],
   "type": "module",
-  "module": "index.ts",
-  "exports": "./index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "bun": "./index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "build": "bun build index.ts --outdir dist --target bun && tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "@flowscripter/dynamic-plugin-framework": "1.9.0"
