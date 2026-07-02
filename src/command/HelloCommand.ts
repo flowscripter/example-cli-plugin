@@ -2,8 +2,12 @@ import type {
   SubCommand,
   Context,
   ArgumentValues,
+  PrinterService,
 } from "@flowscripter/dynamic-cli-framework/plugin";
-import { ArgumentValueTypeName } from "@flowscripter/dynamic-cli-framework/plugin";
+import {
+  ArgumentValueTypeName,
+  PRINTER_SERVICE_ID,
+} from "@flowscripter/dynamic-cli-framework/plugin";
 import { DEMO_SERVICE_ID } from "../service/DemoService.ts";
 import type DemoService from "../service/DemoService.ts";
 
@@ -21,10 +25,11 @@ const helloCommand: SubCommand = {
     },
   ],
   execute: async (context: Context, argumentValues: ArgumentValues) => {
-    const demoService = context.getServiceById(DEMO_SERVICE_ID) as DemoService | undefined;
+    const demoService = context.getServiceById(DEMO_SERVICE_ID) as DemoService;
+    const printerService = context.getServiceById(PRINTER_SERVICE_ID) as PrinterService;
     const name = (argumentValues["name"] as string | undefined) ?? "World";
-    const greeting = demoService ? demoService.greet(name) : `Hello, ${name}!`;
-    console.log(greeting);
+    const greeting = demoService.cowsay(name);
+    await printerService?.print(greeting);
   },
 };
 
