@@ -45,7 +45,7 @@
     "cowsay": "^1.6.0"
   },
   "devDependencies": {
-    "@flowscripter/dynamic-cli-framework": "1.6.2",
+    "@flowscripter/dynamic-cli-framework": "1.7.0",
     "@types/bun": "^1.3.14",
     "oxfmt": "0.56.0",
     "oxlint": "1.71.0"
