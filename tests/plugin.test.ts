@@ -48,8 +48,8 @@ describe("example-cli-plugin", () => {
     expect(providers[0]!.serviceId).toBe(DEMO_SERVICE_ID);
   });
 
-  test("DefaultDemoService.greet returns greeting", () => {
+  test("DefaultDemoService.cowsay returns greeting", () => {
     const service = new DefaultDemoService();
-    expect(service.greet("Alice")).toBe("Hello, Alice!");
+    expect(service.cowsay("Alice")).toInclude("Hello, Alice!");
   });
 });

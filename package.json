@@ -59,5 +59,11 @@
       "DYNAMIC_CLI_FRAMEWORK_COMMAND_FACTORY",
       "DYNAMIC_CLI_FRAMEWORK_SERVICE_PROVIDER_FACTORY"
     ]
+  },
+  "typedocOptions": {
+    "readme": "none",
+    "exclude": [
+      "tests/**"
+    ]
   }
 }
