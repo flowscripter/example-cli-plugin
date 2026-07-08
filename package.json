@@ -39,7 +39,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "bun build index.ts --outdir dist --target bun && tsc -p tsconfig.build.json"
+    "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "cowsay": "^1.6.0"
