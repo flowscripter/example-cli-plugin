@@ -76,13 +76,26 @@ classDiagram
         +execute(context, argumentValues) void
     }
 
+    class helloRustCommand {
+        <<SubCommand>>
+        +name: "hello_rust"
+        +execute(context) void
+    }
+
+    class world {
+        <<@flowscripter/template-bun-rust-library>>
+        +world() void
+    }
+
     Plugin --> DemoCommandFactory : extensionDescriptor
     Plugin --> DemoServiceProviderFactory : extensionDescriptor
     DemoCommandFactory --> helloCommand : getCommands()
+    DemoCommandFactory --> helloRustCommand : getCommands()
     DemoServiceProviderFactory --> DemoServiceProvider : getServiceProviders()
     DemoServiceProvider --> DefaultDemoService : creates
     DefaultDemoService ..|> DemoService
     helloCommand --> DemoService : uses via context
+    helloRustCommand --> world : calls
 ```
 
 ### Framework API

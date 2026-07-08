@@ -42,6 +42,7 @@
     "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
+    "@flowscripter/template-bun-rust-library": "^1.2.5",
     "cowsay": "^1.6.0"
   },
   "devDependencies": {
