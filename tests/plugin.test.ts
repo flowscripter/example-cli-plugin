@@ -10,6 +10,7 @@ import DefaultDemoService from "../src/service/DefaultDemoService.ts";
 import { DEMO_SERVICE_ID } from "../src/service/DemoService.ts";
 import type DemoService from "../src/service/DemoService.ts";
 import helloCommand from "../src/command/HelloCommand.ts";
+import helloRustCommand from "../src/command/HelloRustCommand.ts";
 import { WritableStream } from "node:stream/web";
 import {
   MultiCommandCliHelpGlobalCommand,
@@ -52,8 +53,9 @@ describe("example-cli-plugin", () => {
     )!;
     const factory = (await descriptor.factory.create()) as CommandFactory;
     const commands = factory.getCommands();
-    expect(commands).toHaveLength(1);
+    expect(commands).toHaveLength(2);
     expect(commands[0]!.name).toBe("hello");
+    expect(commands[1]!.name).toBe("hello_rust");
   });
 
   test("service provider factory creates DemoServiceProvider", async () => {
@@ -220,5 +222,58 @@ describe("example-cli-plugin", () => {
 
     const output = chunks.join("");
     expect(output).toBe("Hello, Alice!\n");
+  });
+
+  test("helloRustCommand.execute prints 'Hello ' via printer service", async () => {
+    const chunks: string[] = [];
+    const stdoutStream = new WritableStream<Uint8Array>({
+      write: (chunk: Uint8Array) => {
+        chunks.push(new TextDecoder().decode(chunk));
+      },
+    });
+
+    const mockTerminal: Terminal = {
+      clearLine: async () => {},
+      clearUpLines: async () => {},
+      hideCursor: async () => {},
+      showCursor: async () => {},
+      write: async () => {},
+      columns: () => 80,
+      rows: () => 24,
+    };
+
+    const mockStyler: Styler = {
+      colorEnabled: false,
+      hyperlinksEnabled: false,
+      colorText: (text: string) => text,
+      backgroundColorText: (text: string) => text,
+      italicText: (text: string) => text,
+      hyperlink: (text: string) => text,
+    };
+
+    const printerService = new DefaultPrinterService(
+      stdoutStream,
+      stdoutStream,
+      false,
+      false,
+      mockTerminal,
+      mockTerminal,
+      mockStyler,
+    );
+
+    const cliConfig: CLIConfig = { name: "test-cli", version: "0.0.0" };
+    const mockContext: Context = {
+      cliConfig,
+      getServiceById: (id: string): unknown => {
+        if (id === PRINTER_SERVICE_ID) return printerService;
+        return undefined;
+      },
+      doesServiceExist: (id: string): boolean => id === PRINTER_SERVICE_ID,
+    };
+
+    await helloRustCommand.execute!(mockContext, {});
+
+    const output = chunks.join("");
+    expect(output).toBe("Hello ");
   });
 });
