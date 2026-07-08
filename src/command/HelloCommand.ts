@@ -3,11 +3,11 @@ import type {
   Context,
   ArgumentValues,
   PrinterService,
-} from "@flowscripter/dynamic-cli-framework/plugin";
+} from "@flowscripter/dynamic-cli-framework/cli-plugin";
 import {
   ArgumentValueTypeName,
   PRINTER_SERVICE_ID,
-} from "@flowscripter/dynamic-cli-framework/plugin";
+} from "@flowscripter/dynamic-cli-framework/cli-plugin";
 import { DEMO_SERVICE_ID } from "../service/DemoService.ts";
 import type DemoService from "../service/DemoService.ts";
 

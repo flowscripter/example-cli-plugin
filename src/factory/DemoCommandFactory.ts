@@ -1,4 +1,4 @@
-import type { CommandFactory } from "@flowscripter/dynamic-cli-framework/plugin";
+import type { CommandFactory } from "@flowscripter/dynamic-cli-framework/cli-plugin";
 import helloCommand from "../command/HelloCommand.ts";
 
 export default class DemoCommandFactory implements CommandFactory {
