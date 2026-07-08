@@ -39,7 +39,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "bun build index.ts --outdir dist --target bun && tsc -p tsconfig.build.json"
+    "build": "bun build index.ts --outdir dist --target bun --external \"@flowscripter/dynamic-cli-framework\" && tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "cowsay": "^1.6.0"
