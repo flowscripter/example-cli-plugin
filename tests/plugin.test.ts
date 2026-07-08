@@ -3,9 +3,9 @@ import plugin from "../src/plugin.ts";
 import {
   DYNAMIC_CLI_FRAMEWORK_COMMAND_FACTORY_EXTENSION_POINT,
   DYNAMIC_CLI_FRAMEWORK_SERVICE_PROVIDER_FACTORY_EXTENSION_POINT,
-} from "@flowscripter/dynamic-cli-framework/plugin";
-import type { CommandFactory } from "@flowscripter/dynamic-cli-framework/plugin";
-import type { ServiceProviderFactory } from "@flowscripter/dynamic-cli-framework/plugin";
+} from "@flowscripter/dynamic-cli-framework/cli-plugin";
+import type { CommandFactory } from "@flowscripter/dynamic-cli-framework/cli-plugin";
+import type { ServiceProviderFactory } from "@flowscripter/dynamic-cli-framework/cli-plugin";
 import DefaultDemoService from "../src/service/DefaultDemoService.ts";
 import { DEMO_SERVICE_ID } from "../src/service/DemoService.ts";
 import type DemoService from "../src/service/DemoService.ts";

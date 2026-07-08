@@ -3,7 +3,7 @@ import type {
   ServiceInfo,
   CLIConfig,
   Context,
-} from "@flowscripter/dynamic-cli-framework/plugin";
+} from "@flowscripter/dynamic-cli-framework/cli-plugin";
 import { DEMO_SERVICE_ID } from "./DemoService.ts";
 import DefaultDemoService from "./DefaultDemoService.ts";
 
