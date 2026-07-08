@@ -14,6 +14,7 @@ import type DemoService from "../service/DemoService.ts";
 const helloCommand: SubCommand = {
   name: "hello",
   description: "Greet someone using the demo service",
+  helpTopic: "Hello",
   enableConfiguration: false,
   options: [],
   positionals: [
@@ -29,7 +30,7 @@ const helloCommand: SubCommand = {
     const printerService = context.getServiceById(PRINTER_SERVICE_ID) as PrinterService;
     const name = (argumentValues["name"] as string | undefined) ?? "World";
     const greeting = demoService.cowsay(name);
-    await printerService?.print(greeting);
+    await printerService?.print(`${greeting}\n`);
   },
 };
 
