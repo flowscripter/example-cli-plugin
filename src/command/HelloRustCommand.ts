@@ -2,8 +2,8 @@ import type {
   SubCommand,
   Context,
   PrinterService,
-} from "@flowscripter/dynamic-cli-framework/cli-plugin";
-import { PRINTER_SERVICE_ID } from "@flowscripter/dynamic-cli-framework/cli-plugin";
+} from "@flowscripter/dynamic-cli-framework-api";
+import { PRINTER_SERVICE_ID } from "@flowscripter/dynamic-cli-framework-api";
 import { world } from "@flowscripter/template-bun-rust-library";
 
 const helloRustCommand: SubCommand = {
