@@ -1,6 +1,6 @@
 {
   "name": "@flowscripter/example-cli-plugin",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Example CLI plugin for the https://github.com/flowscripter/dynamic-cli-framework",
   "keywords": [
     "bun",
