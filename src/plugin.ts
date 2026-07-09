@@ -1,4 +1,4 @@
-import { createCLIPlugin } from "@flowscripter/dynamic-cli-framework/cli-plugin";
+import { createCLIPlugin } from "@flowscripter/dynamic-cli-framework-api";
 import DemoCommandFactory from "./factory/DemoCommandFactory.ts";
 import DemoServiceProviderFactory from "./factory/DemoServiceProviderFactory.ts";
 

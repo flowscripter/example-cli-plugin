@@ -9,6 +9,13 @@
 > Example CLI plugin for the
 > [dynamic-cli-framework](https://github.com/flowscripter/dynamic-cli-framework)
 
+This plugin is authored against
+[`@flowscripter/dynamic-cli-framework-api`](https://github.com/flowscripter/dynamic-cli-framework-api),
+the lightweight plugin-facing API package, rather than the full
+`dynamic-cli-framework` - keeping the framework's concrete service
+implementations and their dependencies out of the plugin's own
+dependency tree.
+
 ## Development
 
 Build (produces `dist/` for Node.js and TypeScript consumers; Bun uses raw source directly):

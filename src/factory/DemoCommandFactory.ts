@@ -1,4 +1,4 @@
-import type { CommandFactory } from "@flowscripter/dynamic-cli-framework/cli-plugin";
+import type { CommandFactory } from "@flowscripter/dynamic-cli-framework-api";
 import helloCommand from "../command/HelloCommand.ts";
 import helloRustCommand from "../command/HelloRustCommand.ts";
 

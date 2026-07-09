@@ -9,19 +9,22 @@
         "cowsay": "^1.6.0",
       },
       "devDependencies": {
-        "@flowscripter/dynamic-cli-framework": "1.7.3",
+        "@flowscripter/dynamic-cli-framework": "^2.0.0",
+        "@flowscripter/dynamic-cli-framework-api": "^1.0.1",
         "@types/bun": "^1.3.14",
         "oxfmt": "0.56.0",
         "oxlint": "1.71.0",
       },
       "peerDependencies": {
-        "@flowscripter/dynamic-cli-framework": "*",
+        "@flowscripter/dynamic-cli-framework-api": "*",
         "typescript": "^6.0.3",
       },
     },
   },
   "packages": {
-    "@flowscripter/dynamic-cli-framework": ["@flowscripter/dynamic-cli-framework@1.7.3", "", { "dependencies": { "@flowscripter/dynamic-plugin-framework": "1.10.1", "emphasize": "^7.0.0", "fastest-levenshtein": "^1.0.16", "figlet": "^1.11.0", "highlight.js": "^11.11.1", "prettier": "^3.9.4", "supports-color": "^10.2.2", "supports-terminal-graphics": "^0.1.0" }, "peerDependencies": { "typescript": "^6.0.3" } }, "sha512-odf0w9VoghMvFLO3TKVUYUB8FFVfPVF1MH3a38S91cs/vhve6/d57+Lf8iWaCNSCqUswnxGtdTbUMa7OXvz03A=="],
+    "@flowscripter/dynamic-cli-framework": ["@flowscripter/dynamic-cli-framework@2.0.0", "", { "dependencies": { "@flowscripter/dynamic-cli-framework-api": "^1.0.1", "@flowscripter/dynamic-plugin-framework": "1.10.1", "emphasize": "^7.0.0", "fastest-levenshtein": "^1.0.16", "figlet": "^1.11.0", "highlight.js": "^11.11.1", "prettier": "^3.9.4", "supports-color": "^10.2.2", "supports-terminal-graphics": "^0.1.0" }, "peerDependencies": { "typescript": "^6.0.3" } }, "sha512-XUPIMv5n+24XOKe8AGZgvzbilH8mO3oztdEWrx3rMEJLIV+J5lCSuoeG4y9Ldr5g/ZBosfvP5VMTFJFqhliSfw=="],
+
+    "@flowscripter/dynamic-cli-framework-api": ["@flowscripter/dynamic-cli-framework-api@1.0.1", "", { "peerDependencies": { "typescript": "^6.0.3" } }, "sha512-Ywi5y8NgFyrum5MbRKGSZ80T1XGOabdKZHzgYmtvLMhmPq9W+ZgbkPkysLxhl0E9YJtBJdvICtu1UT5/M+yTvA=="],
 
     "@flowscripter/dynamic-plugin-framework": ["@flowscripter/dynamic-plugin-framework@1.10.1", "", { "dependencies": { "semver": "^7.8.5" }, "peerDependencies": { "typescript": "^6.0.3" } }, "sha512-9yUz64tj1R2RRuUAtHEqJf4hZYF4cIbUGHOOM32q4jDsdd4g5BQKa1gPhh7UPqHggs890XJxgE6R12opKKudAA=="],
 

@@ -46,13 +46,14 @@
     "cowsay": "^1.6.0"
   },
   "devDependencies": {
-    "@flowscripter/dynamic-cli-framework": "1.7.3",
+    "@flowscripter/dynamic-cli-framework": "^2.0.0",
+    "@flowscripter/dynamic-cli-framework-api": "^1.0.1",
     "@types/bun": "^1.3.14",
     "oxfmt": "0.56.0",
     "oxlint": "1.71.0"
   },
   "peerDependencies": {
-    "@flowscripter/dynamic-cli-framework": "*",
+    "@flowscripter/dynamic-cli-framework-api": "*",
     "typescript": "^6.0.3"
   },
   "dynamic-cli-framework": {
