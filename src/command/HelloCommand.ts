@@ -4,10 +4,7 @@ import type {
   ArgumentValues,
   PrinterService,
 } from "@flowscripter/dynamic-cli-framework-api";
-import {
-  ArgumentValueTypeName,
-  PRINTER_SERVICE_ID,
-} from "@flowscripter/dynamic-cli-framework-api";
+import { ArgumentValueTypeName, PRINTER_SERVICE_ID } from "@flowscripter/dynamic-cli-framework-api";
 import { DEMO_SERVICE_ID } from "../service/DemoService.ts";
 import type DemoService from "../service/DemoService.ts";
 
