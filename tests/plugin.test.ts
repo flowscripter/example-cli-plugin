@@ -103,6 +103,7 @@ describe("example-cli-plugin", () => {
       write: async () => {},
       columns: () => 80,
       rows: () => 24,
+      isTty: () => true,
     };
 
     const mockStyler: Styler = {
@@ -180,6 +181,7 @@ describe("example-cli-plugin", () => {
       write: async () => {},
       columns: () => 80,
       rows: () => 24,
+      isTty: () => true,
     };
 
     const mockStyler: Styler = {
@@ -239,6 +241,7 @@ describe("example-cli-plugin", () => {
       write: async () => {},
       columns: () => 80,
       rows: () => 24,
+      isTty: () => true,
     };
 
     const mockStyler: Styler = {
