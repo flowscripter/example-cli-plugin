@@ -1,10 +1,10 @@
 import type {
   SubCommand,
   Context,
-  ArgumentValues,
+  Values,
   PrinterService,
 } from "@flowscripter/dynamic-cli-framework-api";
-import { ArgumentValueTypeName, PRINTER_SERVICE_ID } from "@flowscripter/dynamic-cli-framework-api";
+import { ValueTypeName, PRINTER_SERVICE_ID } from "@flowscripter/dynamic-cli-framework-api";
 import { DEMO_SERVICE_ID } from "../service/DemoService.ts";
 import type DemoService from "../service/DemoService.ts";
 
@@ -18,11 +18,11 @@ const helloCommand: SubCommand = {
     {
       name: "name",
       description: "Name to greet",
-      type: ArgumentValueTypeName.STRING,
+      type: ValueTypeName.STRING,
       isVarargOptional: true,
     },
   ],
-  execute: async (context: Context, argumentValues: ArgumentValues) => {
+  execute: async (context: Context, argumentValues: Values) => {
     const demoService = context.getServiceById(DEMO_SERVICE_ID) as DemoService;
     const printerService = context.getServiceById(PRINTER_SERVICE_ID) as PrinterService;
     const name = (argumentValues["name"] as string | undefined) ?? "World";
