@@ -49,8 +49,8 @@
     "@flowscripter/dynamic-cli-framework": "^5.3.4",
     "@flowscripter/dynamic-cli-framework-api": "^2.3.2",
     "@types/bun": "^1.4.0",
-    "oxfmt": "0.64.0",
-    "oxlint": "1.79.0"
+    "oxfmt": "0.65.0",
+    "oxlint": "1.80.0"
   },
   "peerDependencies": {
     "@flowscripter/dynamic-cli-framework-api": "*",
