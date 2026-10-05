@@ -5,12 +5,12 @@
     "": {
       "name": "@flowscripter/example-cli-plugin",
       "dependencies": {
-        "@flowscripter/template-bun-rust-library": "^1.2.30",
+        "@flowscripter/template-bun-rust-library": "^1.2.31",
         "cowsay": "^1.6.0",
       },
       "devDependencies": {
-        "@flowscripter/dynamic-cli-framework": "^7.0.9",
-        "@flowscripter/dynamic-cli-framework-api": "^4.0.6",
+        "@flowscripter/dynamic-cli-framework": "^7.1.1",
+        "@flowscripter/dynamic-cli-framework-api": "^4.2.2",
         "@types/bun": "^1.4.2",
         "oxfmt": "0.71.0",
         "oxlint": "1.86.0",
@@ -22,13 +22,13 @@
     },
   },
   "packages": {
-    "@flowscripter/dynamic-cli-framework": ["@flowscripter/dynamic-cli-framework@7.0.9", "", { "dependencies": { "@flowscripter/dynamic-cli-framework-api": "^4.0.6", "@flowscripter/dynamic-plugin-framework": "^2.2.14", "emphasize": "^7.0.0", "fastest-levenshtein": "^1.0.16", "figlet": "^1.12.0", "highlight.js": "^11.12.0", "prettier": "^3.9.9", "semver": "^7.8.5", "supports-color": "^11.0.0", "supports-terminal-graphics": "^0.1.0" }, "peerDependencies": { "typescript": "^7.0.2" } }, "sha512-2Vo0H4of7khrF1smHly3tPfn81Yz6EOsBawDAzRJz2Z4HXzWJRIT3kYJ7H4t4gLuR7begQo3z7BCuoPwefr97w=="],
+    "@flowscripter/dynamic-cli-framework": ["@flowscripter/dynamic-cli-framework@7.1.1", "", { "dependencies": { "@flowscripter/dynamic-cli-framework-api": "^4.2.0", "@flowscripter/dynamic-plugin-framework": "^2.2.14", "emphasize": "^7.0.0", "fastest-levenshtein": "^1.0.16", "figlet": "^1.12.0", "highlight.js": "^11.12.0", "prettier": "^3.9.9", "semver": "^7.8.5", "supports-color": "^11.0.0", "supports-terminal-graphics": "^0.1.0" }, "peerDependencies": { "typescript": "^7.0.2" } }, "sha512-M5bA/FvvlV2PycTnWVsodAYu12ODH9B54Lau4Q6EOz0C3YhiUxcHo7dtnFU0IES6R4bquWgt71qznHa6/+cfdQ=="],
 
-    "@flowscripter/dynamic-cli-framework-api": ["@flowscripter/dynamic-cli-framework-api@4.0.6", "", { "peerDependencies": { "typescript": "^7.0.2" } }, "sha512-llV1BUjCsfP3KB9w9XeS3fxcv7eanB+HpR0z4NVh9ULjvascBXzqVV50oyepDSeMS5Hy/OKQG6aEoK0ct7z/+Q=="],
+    "@flowscripter/dynamic-cli-framework-api": ["@flowscripter/dynamic-cli-framework-api@4.2.2", "", { "peerDependencies": { "typescript": "^7.0.2" } }, "sha512-gvQo08rf1gutWQDXvsmP+ZoEKVsHD7CvEFraoAO6HxHb6hjeucPZ26nurdLnQO27m5C4iZNE7EH2dwoESjpxJg=="],
 
-    "@flowscripter/dynamic-plugin-framework": ["@flowscripter/dynamic-plugin-framework@2.2.14", "", { "dependencies": { "semver": "^7.8.5" }, "peerDependencies": { "typescript": "^7.0.2" } }, "sha512-I91cuIMSzhZ/ZZzqtmYyX9sw6TVFGDxRa1PMFPJBJYcydov+kxIbrRUUU9RHSjVO38eBZ6eugklDu0lJnNDaAQ=="],
+    "@flowscripter/dynamic-plugin-framework": ["@flowscripter/dynamic-plugin-framework@2.2.16", "", { "dependencies": { "semver": "^7.8.5" }, "peerDependencies": { "typescript": "^7.0.2" } }, "sha512-ovF/g2eYfFCzHlFNUXwYArx7PWFqKk7iOuZafF3rJv9g8VhsKMm6fSiUDN6MiJlzG2VaEqB0Si3Mb2FJmIUi9Q=="],
 
-    "@flowscripter/template-bun-rust-library": ["@flowscripter/template-bun-rust-library@1.2.30", "", { "peerDependencies": { "typescript": "^7.0.2" } }, "sha512-UPRsrdc2ts107hW3YpY8SsBIa4tMB0numrWWbQoS3xgbCN/iDqveXfPTkrMRygss/Y1nu5QH49vm5rmAF7s1cQ=="],
+    "@flowscripter/template-bun-rust-library": ["@flowscripter/template-bun-rust-library@1.2.31", "", { "peerDependencies": { "typescript": "^7.0.2" } }, "sha512-l0W8+MYvlUla9VlhCobteRYOlDEz8oWpSgFExju//Mw1gfeDBVnUbjpTYWykfnsAhSYJP0WapNlwRJkD5Fzdpw=="],
 
     "@oxfmt/binding-android-arm-eabi": ["@oxfmt/binding-android-arm-eabi@0.71.0", "", { "os": "android", "cpu": "arm" }, "sha512-l31EyBfB4egJeFua11aQFEUE9nnDtfpWCadqQovm0WL30t/yUHtdFl/5HyFXvd5xT8Ewh3U4TI9f30GowrQ1fw=="],
 
@@ -110,7 +110,7 @@
 
     "@types/hast": ["@types/hast@3.0.5", "", { "dependencies": { "@types/unist": "*" } }, "sha512-rp/ezSWaD1m44dPKICGhiskI13nVr7qTloFwDa/IYkhhf5nzwP+zIQcIJh3WIFSBOy/H1PzB40jPjMDksN4F+g=="],
 
-    "@types/node": ["@types/node@26.6.3", "", { "dependencies": { "undici-types": "~8.9.0" } }, "sha512-dsqMQQoeTLqu9wynDD00q573mNzso3IdQOAfHRJqLCcmCFPoGo9A1bDpUcv/9tnKpErQWv9uKeGfl37EIS02Yg=="],
+    "@types/node": ["@types/node@26.6.4", "", { "dependencies": { "undici-types": "~8.9.0" } }, "sha512-ldVPDCzj7fsaGZrLB0NuHuTvJcsNasysBAqMolr/cgxrLd1xbqxIr3XJiPnHHJUCxj5sNF1vnRj9aWnrVh5Jcg=="],
 
     "@types/unist": ["@types/unist@3.0.3", "", {}, "sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q=="],
 
