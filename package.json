@@ -42,12 +42,12 @@
     "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@flowscripter/template-bun-rust-library": "^1.2.33",
+    "@flowscripter/template-bun-rust-library": "^1.2.34",
     "cowsay": "^1.6.0"
   },
   "devDependencies": {
     "@flowscripter/dynamic-cli-framework": "^11.0.0",
-    "@flowscripter/dynamic-cli-framework-api": "^5.0.2",
+    "@flowscripter/dynamic-cli-framework-api": "^5.1.1",
     "@types/bun": "^1.4.3",
     "oxfmt": "0.73.0",
     "oxlint": "1.88.0"
