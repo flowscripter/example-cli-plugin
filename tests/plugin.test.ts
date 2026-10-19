@@ -147,6 +147,7 @@ describe("example-cli-plugin", () => {
 
     const cliConfig: CLIConfig = { name: "test-cli", version: "0.0.0" };
     const mockContext: Context = {
+      isTty: { stdin: false, stdout: false, stderr: false },
       cliConfig,
       getServiceById: (id: string): unknown => {
         if (id === PRINTER_SERVICE_ID) return printerService;
@@ -209,6 +210,7 @@ describe("example-cli-plugin", () => {
 
     const cliConfig: CLIConfig = { name: "test-cli", version: "0.0.0" };
     const mockContext: Context = {
+      isTty: { stdin: false, stdout: false, stderr: false },
       cliConfig,
       getServiceById: (id: string): unknown => {
         if (id === PRINTER_SERVICE_ID) return printerService;
@@ -265,6 +267,7 @@ describe("example-cli-plugin", () => {
 
     const cliConfig: CLIConfig = { name: "test-cli", version: "0.0.0" };
     const mockContext: Context = {
+      isTty: { stdin: false, stdout: false, stderr: false },
       cliConfig,
       getServiceById: (id: string): unknown => {
         if (id === PRINTER_SERVICE_ID) return printerService;
