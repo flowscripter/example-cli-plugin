@@ -42,15 +42,15 @@
     "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@flowscripter/template-bun-rust-library": "^1.2.47",
+    "@flowscripter/template-bun-rust-library": "^1.2.48",
     "cowsay": "^1.6.0"
   },
   "devDependencies": {
     "@flowscripter/dynamic-cli-framework": "^12.2.7",
-    "@flowscripter/dynamic-cli-framework-api": "^5.1.9",
+    "@flowscripter/dynamic-cli-framework-api": "^5.1.10",
     "@types/bun": "^1.4.4",
-    "oxfmt": "0.78.0",
-    "oxlint": "1.93.0"
+    "oxfmt": "0.79.0",
+    "oxlint": "1.94.0"
   },
   "peerDependencies": {
     "@flowscripter/dynamic-cli-framework-api": "*",
